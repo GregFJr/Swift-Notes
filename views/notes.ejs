@@ -14,7 +14,14 @@
     </section>
 
     <section class="container">
-      <div class="note-storage"><h1>holder</h1></div>
+      <div class="note-storage">
+        <h1>holder</h1>
+        <% for (let i = 0; i < notes.length; i++) { %>
+          <ul class="note">
+            <li><%= notes[i].note %></li>
+          </ul>
+        <% } %>
+      </div>
       <form action="/add" method="post">
         <div class="notes">
           <input type="text" name="title" placeholder="Title">

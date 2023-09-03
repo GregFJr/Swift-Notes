@@ -23,6 +23,10 @@ border-right:  2px solid gray;
 width: 30%;
 }
 
+.container .note {
+    margin-left: 10px;
+}
+
 
 .container .notes{
     display: flex;

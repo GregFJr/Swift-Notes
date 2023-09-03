@@ -1,4 +1,5 @@
 const express = require('express'); 
+const fs = require('fs');
 const app = express();
 const path = require('path');
 const port = 3000;
@@ -14,16 +15,23 @@ app.get('/', (req, res) => {
 });
 
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'notes.html'));
+    res.render('notes', { notes });
 });
 
 app.post('/add', (req, res) => {
     const { title, note } = req.body;
     notes.push({ title, note });
 
-    console.log(req.body);
-    res.redirect('/');
+  fs.writeFile('db.json', JSON.stringify(notes), (err) => {
+    if (err) throw err;
+        console.log('The file has been saved!');
 });
+
+
+    console.log(req.body);
+    res.redirect('/notes');
+});
+
 
 
 app.listen(port, () => {
