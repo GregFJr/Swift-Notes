@@ -18,6 +18,7 @@ app.get('/notes', (req, res) => {
     res.render('notes', { notes });
 });
 
+
 app.post('/add', (req, res) => {
     const { title, note } = req.body;
     notes.push({ title, note });
@@ -26,9 +27,27 @@ app.post('/add', (req, res) => {
     if (err) throw err;
         console.log('The file has been saved!');
 });
-
-
     console.log(req.body);
+    res.redirect('/notes');
+});
+
+
+app.get('/delete/:noteId', (req, res) => {
+    const { noteId } = req.params;
+    if (notes[noteId]) {
+        // Remove the note from the notes array
+        notes.splice(noteId, 1);
+    
+        // Save the updated notes array to your data storage (e.g., db.json)
+        fs.writeFile('db.json', JSON.stringify(notes), (err) => {
+          if (err) {
+            console.error('Error writing to db.json:', err);
+          } else {
+            console.log('The file has been saved!');
+          }
+        });
+      }
+
     res.redirect('/notes');
 });
 

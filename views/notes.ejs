@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/notes.css">
     <title>Swift Notes</title>
 </head>
 <body>
     <section class="header">
         <h1>Swift Notes</h1>
+        <span id="save-btn">
+          <i class="fas fa-save" ></i>
+        </span> 
     </section>
 
     <section class="container">
@@ -18,11 +22,15 @@
         <h1>holder</h1>
         <% for (let i = 0; i < notes.length; i++) { %>
           <ul class="note">
-            <li><%= notes[i].note %></li>
+            <li><%= notes[i].note %>
+            </li>
+            <a href="/delete/<%= i %>" class="delete-button">
+              <i class="fas fa-trash"></i>
+            </a>
           </ul>
         <% } %>
       </div>
-      <form action="/add" method="post">
+      <form action="/add" method="post" id="noteForm">
         <div class="notes">
           <input type="text" name="title" placeholder="Title">
             <textarea name="note" id="note" cols="30" rows="10" placeholder="Type Here"></textarea>
@@ -30,4 +38,5 @@
     </form>
 </section>
 </body>
+<script src="/components.js"></script>
 </html>

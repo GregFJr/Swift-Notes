@@ -45,6 +45,19 @@ width: 30%;
     border: none;
 }
 
+.container a {
+    color: red;
+    margin: 0 10px;
+}
+
+.container ul {
+    display: flex;
+    justify-content: space-between
+}
+
+.container li {
+    margin: 10px 0;
+}
 
 input {
     font-size: 2.5em;
