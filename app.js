@@ -38,7 +38,6 @@ app.get('/delete/:noteId', (req, res) => {
         // Remove the note from the notes array
         notes.splice(noteId, 1);
     
-        // Save the updated notes array to your data storage (e.g., db.json)
         fs.writeFile('db.json', JSON.stringify(notes), (err) => {
           if (err) {
             console.error('Error writing to db.json:', err);

@@ -5,11 +5,29 @@
 }
 
 .header  {
+    display: flex;
+    justify-content: space-between;
     padding: 10px 0 0 10px;
     background-color: #eea849;
     border-bottom: 1px solid #8A2BE2;
     font-family: 'Fredericka the Great', cursive;
+}
 
+.header .fas {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.icons {
+    display: flex;
 }
 
 .container {
@@ -47,7 +65,7 @@ width: 30%;
 
 .container a {
     color: red;
-    margin: 0 10px;
+    margin-right: 10px;
 }
 
 .container ul {
@@ -57,6 +75,9 @@ width: 30%;
 
 .container li {
     margin: 10px 0;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    width: 100%;
 }
 
 input {
