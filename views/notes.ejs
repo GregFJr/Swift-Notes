@@ -22,7 +22,7 @@
       <div class="note-storage">
 
         <% for (let i = 0; i < notes.length; i++) { %>
-          <ul class="note">
+          <ul class="note" data-note-json='<%= JSON.stringify(notes[i]) %>'>
             <li><%= notes[i].note %>
             </li>
             <a href="/delete/<%= i %>" class="delete-button">
@@ -34,7 +34,7 @@
       <form action="/add" method="post" id="noteForm">
         <div class="notes">
           <input type="text" name="title" placeholder="Title" id="titleInput">
-            <textarea name="note" id="note" cols="30" rows="10" placeholder="Type Here" id="noteInput"></textarea>
+            <textarea name="note" cols="30" rows="10" placeholder="Type Here" id="noteInput"></textarea>
         </div>
     </form>
 </section>
