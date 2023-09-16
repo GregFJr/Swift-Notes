@@ -7,9 +7,9 @@
 .header  {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0 0 10px;
+    padding: 20px 0 0 10px;
     background-color: #eea849;
-    border-bottom: 1px solid #8A2BE2;
+    height: 80px;
     font-family: 'Fredericka the Great', cursive;
 }
 
@@ -33,18 +33,13 @@
 .container {
     display: flex;
     justify-content: start;
-    margin-top: 2em;
 }
 
 .container .note-storage {
-border-right:  2px solid gray;
-width: 30%;
+    border-right:  2px solid gray;
+    width: 30%;
+    height: 100vh;
 }
-
-.container .note {
-    margin-left: 10px;
-}
-
 
 .container .notes{
     display: flex;
@@ -55,35 +50,31 @@ width: 30%;
 }
 
 .container .notes input {
+    font-size: 2.5em;
     border: none;
-    padding: 16px;
+    padding: 16px 16px 16px 0;
 }
 
 .container .notes textarea {
+    font-size: 1.5em;
     border: none;
 }
 
 .container a {
     color: red;
     margin-right: 10px;
-}
-
-.container ul {
-    display: flex;
-    justify-content: space-between
+    margin-top: 10px;
+    font-size: .8em;
 }
 
 .container li {
-    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 10px 0;
     border-bottom: 1px solid gray;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    font-size: 1.5em;
     width: 100%;
 }
 
-input {
-    font-size: 2.5em;
-}
-
-textarea {
-    font-size: 1.5em;
-}

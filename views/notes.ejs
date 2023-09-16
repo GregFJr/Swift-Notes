@@ -14,7 +14,7 @@
         <h1>Swift Notes</h1>
         <div class="icons">
          <span id="save-icon"> <i class="fas fa-save"></i></span>
-         <span><i class="fas fa-plus"></i></span>
+         <span id="plus-icon"><i class="fas fa-plus"></i></span>
         </div>
     </section>
 
@@ -23,11 +23,11 @@
 
         <% for (let i = 0; i < notes.length; i++) { %>
           <ul class="note" data-note-json='<%= JSON.stringify(notes[i]) %>'>
-            <li><%= notes[i].note %>
+            <li><%= notes[i].title %>
+              <a href="/delete/<%= i %>" class="delete-button">
+                <i class="fas fa-trash"></i>
+              </a>
             </li>
-            <a href="/delete/<%= i %>" class="delete-button">
-              <i class="fas fa-trash"></i>
-            </a>
           </ul>
         <% } %>
       </div>

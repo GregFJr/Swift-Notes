@@ -23,7 +23,8 @@ app.post('/add', (req, res) => {
     const { title, note } = req.body;
     notes.push({ title, note });
 
-  fs.writeFile('db.json', JSON.stringify(notes), (err) => {
+
+  fs.writeFile('db.json', JSON.stringify(notes) + '\n', (err) => {
     if (err) throw err;
         console.log('The file has been saved!');
 });

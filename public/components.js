@@ -23,8 +23,19 @@ const displaySaved = () => {
     };
 }
 
-
 document.getElementById('titleInput').addEventListener('keyup', displaySaved);
+
+// Function to clear all fields
+    const clearAll = () => {
+    const clear =  document.getElementById('plus-icon')
+    const title = document.getElementById('titleInput');
+    const note = document.getElementById('noteInput');
+
+    clear.addEventListener('click', () => {
+        title.value = '';
+        note.value = '';
+    })
+}
 
 
 // Get all the notes from the left-hand column
@@ -45,6 +56,6 @@ notesElements.forEach((noteElement) => {
 
 
 
-
+clearAll();
 displaySaved();
     
