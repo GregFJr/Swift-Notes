@@ -32,7 +32,7 @@ You can access and use Swift-Notes directly from the web: [Swift-Notes](https://
 
 - bash
 - cd Swift-Notes
-- npm start
+- npm start or node app.js
 - Once the application is running, you can navigate to http://localhost:3000 (or the specified port) in your browser to access Swift-Notes.
 
 # Features
