@@ -9,7 +9,7 @@ body, html {
 }
 
 ::placeholder {
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 
 .header  {
@@ -58,11 +58,13 @@ body, html {
 }
 
 .container .notes input {
+    font-size: 2.5em;
     border: none;
-    padding: 16px 16px 16px 0;
+    padding: 25px 16px 16px 0;
 }
 
 .container .notes textarea {
+    font-size: 1.5em;
     width: 100%;
     border: none;
 }
