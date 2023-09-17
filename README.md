@@ -39,3 +39,7 @@ You can access and use Swift-Notes directly from the web: [Swift-Notes](https://
 - Create, view, edit, and delete notes.
 - Simple and intuitive user interface.
 - Mobile-responsive design for access on any device.
+
+# Screenshot
+
+![Screenshot](/screenshots/Screenshot%202023-09-17%20at%2012.14.46%20PM.png)
